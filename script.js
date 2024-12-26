@@ -49,13 +49,23 @@ function detectPersonalLevel() {
 
 detectPersonalLevel();
 
+function writeYourGengers() {
+    for (let i = 1; i < 4; i++) {
+        let questionGenger = prompt(`Ваш любимый жанр под номером ${i}?`,'')
+
+        personalMovieDB.genres.push(questionGenger)
+    }
+};
+
+writeYourGengers();
+
 function showMyDB(obj) {
     if (obj.privat == false) {
         console.log(personalMovieDB);
     } else {
         console.log(`База данных скрыта для вас!`)
     }
-}
+};
 
 showMyDB(personalMovieDB);
 
